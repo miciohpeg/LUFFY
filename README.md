@@ -56,22 +56,17 @@ LUFFY/
 
 ### 📝 Complete TODO List
 
-- [ ] **luffy/deepscaler/utils.py:45** - Implement OpenAI API client initialization
-- [ ] **luffy/deepscaler/utils.py:46** - Add proper authentication handling
-- [ ] **luffy/deepscaler/utils.py:47** - Implement exponential backoff retry logic for rate limits
-- [ ] **luffy/deepscaler/utils.py:48** - Add comprehensive error handling for different API errors
-- [ ] **luffy/deepscaler/utils.py:49** - Implement response parsing and validation
-- [ ] **luffy/deepscaler/utils.py:50** - Add logging for API calls and errors
-- [ ] **luffy/deepscaler/utils.py:51** - Support batch processing for multiple prompts
-- [ ] **luffy/deepscaler/utils.py:52** - Add timeout configuration for API calls
-- [ ] **luffy/deepscaler/utils.py:88** - Implement Vertex AI initialization and authentication
-- [ ] **luffy/deepscaler/utils.py:89** - Configure safety settings for content generation
-- [ ] **luffy/deepscaler/utils.py:90** - Set up GenerativeModel with proper system instructions
-- [ ] **luffy/deepscaler/utils.py:91** - Implement retry logic with exponential backoff
-- [ ] **luffy/deepscaler/utils.py:92** - Add comprehensive error handling for API access issues
-- [ ] **luffy/deepscaler/utils.py:93** - Handle rate limiting and quota management
-- [ ] **luffy/deepscaler/utils.py:94** - Implement response validation and text extraction
-- [ ] **luffy/deepscaler/utils.py:95** - Add support for different generation configurations
+- [ ] **luffy/deepscaler/utils.py:45** - Add logging for API calls and errors
+- [ ] **luffy/deepscaler/utils.py:46** - Support batch processing for multiple prompts
+- [ ] **luffy/deepscaler/utils.py:47** - Add timeout configuration for API calls
+- [ ] **luffy/deepscaler/utils.py:107** - Implement Vertex AI initialization and authentication
+- [ ] **luffy/deepscaler/utils.py:108** - Configure safety settings for content generation
+- [ ] **luffy/deepscaler/utils.py:109** - Set up GenerativeModel with proper system instructions
+- [ ] **luffy/deepscaler/utils.py:110** - Implement retry logic with exponential backoff
+- [ ] **luffy/deepscaler/utils.py:111** - Add comprehensive error handling for API access issues
+- [ ] **luffy/deepscaler/utils.py:112** - Handle rate limiting and quota management
+- [ ] **luffy/deepscaler/utils.py:113** - Implement response validation and text extraction
+- [ ] **luffy/deepscaler/utils.py:114** - Add support for different generation configurations
 - [ ] **luffy/test.py:1590** - add smaller page sizes when https://github.com/Dao-AILab/flash-attention/pull/824 is merged
 - [ ] **luffy/verl/examples/split_placement/split_monkey_patch.py:141** - make a canonical logger that supports various backend
 - [ ] **luffy/verl/tests/e2e/check_results.py:21** - this function needs error handling
@@ -110,19 +105,13 @@ LUFFY/
 - [ ] **luffy/verl/verl/models/llama/megatron/modeling_llama_megatron.py:588** - for better performance, the sp padding should be removed at each layer. Not sure the performance gap
 - [ ] **luffy/verl/verl/models/registry.py:21** - (sgm): HF may supported more than listed here, we should add more after testing
 - [ ] **luffy/verl/verl/models/transformers/llama.py:88** - These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim]. We would need to refactor the KV cache
-- [ ] **luffy/verl/verl/protocol.py:114** - Implement batch dimension folding for efficient processing
-- [ ] **luffy/verl/verl/protocol.py:115** - Add validation for batch size compatibility
-- [ ] **luffy/verl/verl/protocol.py:116** - Handle edge cases where batch_size is not divisible by new_batch_size
-- [ ] **luffy/verl/verl/protocol.py:117** - Optimize memory usage during tensor reshaping
-- [ ] **luffy/verl/verl/protocol.py:118** - Add support for different tensor types and shapes
-- [ ] **luffy/verl/verl/protocol.py:131** - Implement batch dimension unfolding functionality
-- [ ] **luffy/verl/verl/protocol.py:132** - Add support for variable batch dimensions
-- [ ] **luffy/verl/verl/protocol.py:133** - Optimize tensor view operations for performance
-- [ ] **luffy/verl/verl/protocol.py:134** - Handle non-tensor batch data reshaping properly
-- [ ] **luffy/verl/verl/protocol.py:135** - Add error handling for invalid batch dimensions
-- [ ] **luffy/verl/verl/protocol.py:156** - (zhangchi.usc1992) add consistency check
-- [ ] **luffy/verl/verl/protocol.py:252** - we can actually lift this restriction if needed
-- [ ] **luffy/verl/verl/protocol.py:338** - (zhangchi.usc1992) whether to copy
+- [ ] **luffy/verl/verl/protocol.py:114** - Optimize memory usage during tensor reshaping
+- [ ] **luffy/verl/verl/protocol.py:115** - Add support for different tensor types and shapes
+- [ ] **luffy/verl/verl/protocol.py:136** - Optimize tensor view operations for performance
+- [ ] **luffy/verl/verl/protocol.py:137** - Add error handling for invalid batch dimensions
+- [ ] **luffy/verl/verl/protocol.py:169** - (zhangchi.usc1992) add consistency check
+- [ ] **luffy/verl/verl/protocol.py:265** - we can actually lift this restriction if needed
+- [ ] **luffy/verl/verl/protocol.py:351** - (zhangchi.usc1992) whether to copy
 - [ ] **luffy/verl/verl/single_controller/ray/base.py:439** - create a class with customizable name
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:64** - (shengguangming): delete the unused args
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:147** - (woosuk): Support fine-grained seeds (e.g., seed per request).
@@ -130,10 +119,8 @@ LUFFY/
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:241** - (sgm): we can optimize it by making the dataloader yield List[int] without padding.
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py:257** - (shengguangming): can be optimzied by rewrite the Sampler._get_logprobs() logits
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:99** - (woosuk): Print more configs in debug mode.
-- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:101** - currently is hfconfig
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:112** - (shengguangming): maybe we can choose init here or from arguments
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:145** - check get_lora_tokenizer func
-- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:586** - check this input
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py:661** - we may not need to decode
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/model_loader.py:67** - (shengguangming): latest commit in vllm fix awq for this function and add load_weights
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/model_loader.py:96** - (pad to be divided by 4)
@@ -152,7 +139,6 @@ LUFFY/
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm.py:272** - (sgm): we can optimize it by making the dataloader yield List[int] without padding.
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm.py:288** - (shengguangming): can be optimzied by rewrite the Sampler._get_logprobs() logits
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py:128** - (woosuk): Print more configs in debug mode.
-- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py:130** - currently is hfconfig
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py:143** - (shengguangming): maybe we can choose init here or from arguments
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py:145** - check tokenizer class
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py:153** - don't know what's the usage
@@ -200,7 +186,6 @@ LUFFY/
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/spmd_gpu_executor.py:243** - (sgm): not implemented async executor yet
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/tokenizer.py:61** - (sgm): the lora tokenizer is also passed, but may be different
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:29** - (sgm): check why vllm has similar file in vllm.model_executor.parallel_utils.parallel_state
-- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:84** - we don't need driver
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:103** - (sgm): set correct model runner class
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:301** - (sgm): check whether need this
 - [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:77** - add checkpoint manager
@@ -269,7 +254,6 @@ LUFFY/
 - [ ] **luffy/verl/verl/workers/megatron_workers.py:507** - add more optimizer args into config
 - [ ] **luffy/verl/verl/workers/megatron_workers.py:667** - add more optimizer args into config
 - [ ] **luffy/verl/verl/workers/megatron_workers.py:720** - reward model use itself tokenizer instead of sft tokenizer
-- [ ] **luffy/verl/verl/workers/reward_model/megatron/reward_model.py:145** - (sgm): check why is bfloat16
 - [ ] **luffy/verl/verl/workers/reward_model/megatron/reward_model.py:192** - actually, we just need to control the sampling order.
 - [ ] **luffy/verl/verl/workers/reward_model/megatron/reward_model.py:233** - we may use the new schedule instead
 - [ ] **luffy/verl/verl/workers/rollout/hf_rollout.py:98** - filter out the seq with no answers like ds-chat
